@@ -10,7 +10,7 @@
   <thead>
     <tr>
       <td>Nome</td>
-      <td colspan="2"></td>
+      <td colspan="3"></td>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +19,8 @@
       <td><%= customer.name %></td>
       <td><%= link_to "Mostrar", customer_path(customer) %></td>
       <td><%= link_to "Editar", edit_customer_path(customer) %></td>
+      <td><%= link_to "Excluir", customer_path(customer), method: :delete %></td>
+      <!-- , data: { confirm: 'Realmente deseja excluir?' } -->
     </tr>
     <% end %>
   </tbody>
